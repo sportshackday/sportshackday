@@ -1,0 +1,158 @@
+.date {
+  margin-bottom: 10px;
+}
+
+.logo {
+  margin: 0 0 48px 0;
+  padding-right: 65px;
+  height: 92px;
+  position: relative;
+
+  font-family: octin-sports, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 80px;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5;
+
+  span {
+    position: absolute;
+    width: 65px;
+    height: 375px;
+
+    -webkit-transform-origin: bottom center;
+    -moz-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    -o-transform-origin: bottom center;
+    transform-origin: bottom-center;
+  }
+
+  @for $i from 1 through 15 {
+    .char#{$i} {
+      @if $i == 8 {
+        @include transform(rotate(($i*9) - 73deg)); // Kerning
+      } @else if  $i == 14 {
+        @include transform(rotate(($i*9) - 71deg)); // Kerning
+      } @else {
+        @include transform(rotate(($i*9) - 71.5deg));
+      }
+    }
+  }
+}
+
+.heading {
+  margin-bottom: 18px;
+
+  background: url('../img/border-left.png') top left no-repeat,
+              url('../img/border-right.png') top right no-repeat,
+              $white;
+  color: $red;
+}
+
+.footer {
+  background: $blue;
+}
+
+.football {
+  width: 275px;
+  display: block;
+  margin: 0 auto 60px;
+  position: relative;
+  z-index: 2;
+
+  @include transition(0.3s ease-out);
+  @include transform(rotate(25deg));
+
+  &:hover {
+    @include transform(rotate(0deg));
+  }
+}
+
+.sponsors {
+  padding: 0;
+  margin-left: -7%;
+  list-style: none;
+
+  li {
+    @include box-sizing(border-box);
+    float: left;
+    width: 26%;
+    height: 132px;
+    margin-left: 7%;
+
+    background: url(/img/top-left.png) top left no-repeat,
+                url(/img/top-right.png) top right no-repeat,
+                url(/img/bottom-left.png) bottom left no-repeat,
+                url(/img/bottom-right.png) bottom right no-repeat,
+                $white;
+
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    padding: 1.5em;
+  }
+
+  img {
+    display: block;
+    position: relative;
+  }
+}
+
+.details {
+  margin-top: 72px;
+
+  font-size: 13px;
+  text-align: center;
+}
+
+.map {
+  height: 400px;
+  margin: 36px 0;
+}
+
+.judges {
+  padding: 0;
+
+  list-style: none;
+
+  li {
+    margin-bottom: 16px;
+  }
+
+  img {
+    width: 80px;
+    padding: 10px;
+    display: block;
+    float: left;
+    margin-right: 20px;
+
+    background: $white;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.judges-name {
+  margin: 21px 0 0;
+
+  font-size: 18px;
+  font-family: octin-sports, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.judges-bio {
+  margin: 0;
+
+  font-size: 16px;
+}
+
+.superbowl {
+  font-family: octin-sports, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+}
