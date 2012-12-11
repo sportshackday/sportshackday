@@ -1,18 +1,215 @@
 .date {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+  font-family: octin-sports, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+
+  i {
+    display: none;
+  }
+
+  b {
+    display: inline;
+  }
+}
+
+.primary {
+  position: relative;
+}
+
+.no-csstransforms .primary {
+  padding-top: 0;
 }
 
 .logo {
-  margin: 0 0 48px 0;
-  padding-right: 65px;
-  height: 92px;
-  position: relative;
+  margin: 36px 0 48px;
+  left: 50%;
+  top: 0;
 
   font-family: octin-sports, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 80px;
   font-style: normal;
+  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+  line-height: 1;
+}
+
+.no-csstransforms .logo {
+  position: static;
+  padding: 0;
+
+  span {
+    position: static;
+  }
+}
+
+.heading {
+  margin-bottom: 18px;
+  padding: 0 10px;
+
+  background-color: $white;
+  background-image: url('../img/border-left.png'),
+                    url('../img/border-right.png');
+  background-position: top left, top right;
+  background-repeat: no-repeat;
+
+  color: $red;
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 1.25), 
+(min-resolution: 120dpi){
+
+.heading {
+  background-image: url('../img/border-left@2x.png'),
+                    url('../img/border-right@2x.png');
+  @include background-size(20px);
+}
+}
+
+.accent {
+  background: $blue;
+}
+
+.football {
+  width: 275px;
+  display: block;
+  margin: 0 auto 36px;
+  position: relative;
+  z-index: 2;
+
+  @include transition(0.3s ease-out);
+}
+
+.csstransitions .football:hover {
+  @include transform(rotate(-25deg));
+}
+
+.sponsors {
+  margin: 20px 0 16px;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 12px 10px;
+  }
+
+  img {
+    width: 150px;
+    position: relative;
+    display: block;
+  }
+}
+
+.small-sponsors {
+  padding: 0;
+  margin: 36px 0;
+  margin-left: -36px;
+
+  list-style: none;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin-left: 36px;
+    width: 150px;
+  }
+
+  img {
+    display: block;
+  }
+
+  a {
+    display: block;
+    padding: 10px;
+
+    background: $white;
+  }
+}
+
+.details {
+  margin-top: 72px;
+
+  font-size: 13px;
+  text-align: center;
+}
+
+.map {
+  height: 400px;
+  margin: 36px 0;
+}
+
+.judges {
+  padding: 0;
+  margin-bottom: 36px;
+
+  list-style: none;
+
+  li {
+    margin-bottom: 16px;
+  }
+
+  img {
+    width: 80px;
+    padding: 10px;
+    display: block;
+    float: left;
+    margin-right: 20px;
+
+    background: $white;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.judges-name {
+  margin: 7px 0 6px;
+
+  font-size: 18px;
+  font-family: octin-sports, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.judges-bio {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.superbowl {
+  font-family: octin-sports, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  b {
+    display: block;
+
+    font-weight: normal;
+  }
+}
+
+.content {
+  padding: 0 16px;
+}
+
+@media only screen and (min-width: $breakpoint-1) {
+
+.primary {
+  padding-top: 176px;
+}
+
+.logo {
+  padding-right: 65px;
+  margin-left: -32.5px;
+  height: 92px;
+  position: absolute;
+
   line-height: 1.5;
 
   span {
@@ -38,121 +235,34 @@
       }
     }
   }
+
 }
 
-.heading {
-  margin-bottom: 18px;
-
-  background: url('../img/border-left.png') top left no-repeat,
-              url('../img/border-right.png') top right no-repeat,
-              $white;
-  color: $red;
-}
-
-.footer {
-  background: $blue;
-}
-
-.football {
-  width: 275px;
-  display: block;
-  margin: 0 auto 60px;
-  position: relative;
-  z-index: 2;
-
-  @include transition(0.3s ease-out);
-  @include transform(rotate(25deg));
-
-  &:hover {
-    @include transform(rotate(0deg));
-  }
-}
-
-.sponsors {
-  padding: 0;
-  margin-left: -7%;
-  list-style: none;
-
-  li {
-    @include box-sizing(border-box);
-    float: left;
-    width: 26%;
-    height: 132px;
-    margin-left: 7%;
-
-    background: url(/img/top-left.png) top left no-repeat,
-                url(/img/top-right.png) top right no-repeat,
-                url(/img/bottom-left.png) bottom left no-repeat,
-                url(/img/bottom-right.png) bottom right no-repeat,
-                $white;
-
-    text-align: center;
+  .sponsors img {
+    display: inline;
   }
 
-  a {
-    display: block;
-    padding: 1.5em;
+  .date {
+
+    i {
+      display: inline;
+    }
+
+    b {
+      display: none;
+    }
   }
 
-  img {
-    display: block;
-    position: relative;
-  }
-}
-
-.details {
-  margin-top: 72px;
-
-  font-size: 13px;
-  text-align: center;
-}
-
-.map {
-  height: 400px;
-  margin: 36px 0;
-}
-
-.judges {
-  padding: 0;
-
-  list-style: none;
-
-  li {
-    margin-bottom: 16px;
+  .superbowl b {
+    font-size: 80px;
   }
 
-  img {
-    width: 80px;
-    padding: 10px;
-    display: block;
-    float: left;
-    margin-right: 20px;
-
-    background: $white;
-  }
-
-  a {
-    text-decoration: none;
-  }
 }
 
-.judges-name {
-  margin: 21px 0 0;
+@media only screen and (min-width: $breakpoint-2) {
 
-  font-size: 18px;
-  font-family: octin-sports, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: bold;
+.content {
+  padding: 0 36px;
 }
 
-.judges-bio {
-  margin: 0;
-
-  font-size: 16px;
-}
-
-.superbowl {
-  font-family: octin-sports, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  text-transform: uppercase;
 }

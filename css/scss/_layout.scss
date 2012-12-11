@@ -1,8 +1,10 @@
 .l-constrained {
-  width: 100%;
+  width: 95%;
   max-width: 960px;
   margin: 0 auto;
 }
+
+@media only screen and(min-width: $breakpoint-2) {
 
 .l-row {
   clear: both;
@@ -19,4 +21,6 @@
   width: 93%;
   margin-left: 7%;
   float: left;
+}
+
 }
