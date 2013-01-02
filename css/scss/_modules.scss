@@ -30,6 +30,15 @@
 (-webkit-min-device-pixel-ratio: 1.25), 
 (min-resolution: 120dpi){
 
+.twitter {
+  background-image: url('../img/twitter-large.png');
+  background-size: 24px;
+
+  &:hover {
+    background-position: 0 -24px;
+  }
+}
+
 .heading {
   background-image: url('../img/border-left@2x.png'),
                     url('../img/border-right@2x.png');
@@ -152,6 +161,131 @@
 
 .content {
   padding: 0 16px;
+}
+
+.cta {
+  margin: 1.5em 0 1.5em -3.5%;
+
+  text-align: center;
+
+  a {
+    display: inline-block;
+    margin-left: 3.5%;
+  }
+}
+
+.btn {
+  padding: 8px 12px;
+
+  background: $red;
+
+  color: $grey;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    background: $white;
+    color: $grey;
+  }
+}
+
+.twitter {
+  height: 23px;
+  width: 30px;
+  position: relative;
+  top: 4px;
+  display: inline-block;
+
+  background-image: url('../img/twitter.png');
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-position: 0 -27px;
+  } 
+}
+
+.tweets {
+  padding: 0 16px;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  a {
+    text-decoration: none;
+    color: #d1d2d4 !important;
+
+    &:hover {
+      color: $red !important;
+    }
+  }
+}
+
+.tweet {
+  border-top: 1px solid #666;
+  padding: 12px 0;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.time {
+  float:right;
+  color:#999;
+  font-size:12px;
+}
+
+.mt_avatar {
+  float:left;
+  margin: 2px 0 0;
+
+  img {
+    border-radius:5px;
+    width: 48px;
+  }
+}
+
+.mt_header {
+  padding-bottom:4px;
+  padding-left:60px;
+
+  a {
+    font-weight:bold;
+    text-decoration:none;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
+
+.mt_screen_name {
+  font-size:12px;
+  color:#999;
+}
+
+.mt_text {
+  padding-left:60px;
+}
+
+.mt_footer {
+  color:#999;
+  font-size:12px;
+  padding-left:60px;
+
+  .image_r {
+    display:inline-block;
+    margin-bottom:-2px;
+    margin-right:4px;
+    background-position: -20px -290px;
+    width: 14px;
+    height: 13px;
+    background-color:#999;
+  }
+
+  a {
+    color: #999;
+  }
 }
 
 @media only screen and (min-width: $breakpoint-1) {
