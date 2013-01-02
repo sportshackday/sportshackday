@@ -13,48 +13,17 @@
   }
 }
 
-.primary {
-  position: relative;
-}
-
-.no-csstransforms .primary {
-  padding-top: 0;
-}
-
-.logo {
-  margin: 36px 0 48px;
-  left: 50%;
-  top: 0;
-
-  font-family: octin-sports, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 80px;
-  font-style: normal;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-.no-csstransforms .logo {
-  position: static;
-  padding: 0;
-
-  span {
-    position: static;
-  }
-}
-
 .heading {
   margin-bottom: 18px;
   padding: 0 10px;
 
-  background-color: $white;
+  background-color: $red;
   background-image: url('../img/border-left.png'),
                     url('../img/border-right.png');
   background-position: top left, top right;
   background-repeat: no-repeat;
 
-  color: $red;
+  color: $grey;
 }
 
 @media 
@@ -69,25 +38,12 @@
 }
 
 .accent {
-  background: $blue;
-}
-
-.football {
-  width: 275px;
-  display: block;
-  margin: 0 auto 36px;
-  position: relative;
-  z-index: 2;
-
-  @include transition(0.3s ease-out);
-}
-
-.csstransitions .football:hover {
-  @include transform(rotate(-25deg));
+  background: $black;
+  color: $header-text;
 }
 
 .sponsors {
-  margin: 20px 0 16px;
+  margin: 8px 0 4px;
   text-align: center;
 
   a {
@@ -125,7 +81,7 @@
     display: block;
     padding: 10px;
 
-    background: $white;
+    background: #FFF;
   }
 }
 
@@ -199,44 +155,6 @@
 }
 
 @media only screen and (min-width: $breakpoint-1) {
-
-.primary {
-  padding-top: 176px;
-}
-
-.logo {
-  padding-right: 65px;
-  margin-left: -32.5px;
-  height: 92px;
-  position: absolute;
-
-  line-height: 1.5;
-
-  span {
-    position: absolute;
-    width: 65px;
-    height: 375px;
-
-    -webkit-transform-origin: bottom center;
-    -moz-transform-origin: bottom center;
-    -ms-transform-origin: bottom center;
-    -o-transform-origin: bottom center;
-    transform-origin: bottom-center;
-  }
-
-  @for $i from 1 through 15 {
-    .char#{$i} {
-      @if $i == 8 {
-        @include transform(rotate(($i*9) - 73deg)); // Kerning
-      } @else if  $i == 14 {
-        @include transform(rotate(($i*9) - 71deg)); // Kerning
-      } @else {
-        @include transform(rotate(($i*9) - 71.5deg));
-      }
-    }
-  }
-
-}
 
   .sponsors img {
     display: inline;
