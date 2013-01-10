@@ -26,26 +26,6 @@
   color: $grey;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 1.25), 
-(min-resolution: 120dpi){
-
-.twitter {
-  background-image: url('../img/twitter-large.png');
-  background-size: 24px;
-
-  &:hover {
-    background-position: 0 -24px;
-  }
-}
-
-.heading {
-  background-image: url('../img/border-left@2x.png'),
-                    url('../img/border-right@2x.png');
-  @include background-size(20px);
-}
-}
-
 .accent {
   background: $black;
   color: $header-text;
@@ -296,7 +276,7 @@
 
 .organizers {
   padding: 0;
-  margin: 1.5em 0 1.5em -6.82%;
+  margin: 1.5em 0 1.5em -1.5em;
 
   font-family: octin-sports,Helvetica Neue,Helvetica,Arial,sans-serif;
   list-style: none;
@@ -305,8 +285,8 @@
   li {
     margin-bottom: 1.5em;
     display: inline-block;
-    margin-left: 6.82%;
-    width: 42%;
+    margin-left: 1.5em;
+    max-width: 42%;
     vertical-align: top;
   }
 
@@ -326,35 +306,4 @@
 
 .lt-ie9 .organizers img {
   width: 166px;
-}
-
-@media only screen and (min-width: $breakpoint-1) {
-
-  .sponsors img {
-    display: inline;
-  }
-
-  .date {
-
-    i {
-      display: inline;
-    }
-
-    b {
-      display: none;
-    }
-  }
-
-  .superbowl b {
-    font-size: 80px;
-  }
-
-}
-
-@media only screen and (min-width: $breakpoint-2) {
-
-.content {
-  padding: 0 36px;
-}
-
 }

@@ -3,24 +3,3 @@
   max-width: 960px;
   margin: 0 auto;
 }
-
-@media only screen and(min-width: $breakpoint-2) {
-
-.l-row {
-  clear: both;
-  margin-left: -7%;
-}
-
-.l-single {
-  width: 43%;
-  margin-left: 7%;
-  float: left;
-}
-
-.l-double {
-  width: 93%;
-  margin-left: 7%;
-  float: left;
-}
-
-}

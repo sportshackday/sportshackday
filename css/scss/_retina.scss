@@ -1,0 +1,17 @@
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+
+  .twitter {
+    background-image: url('../img/twitter-large.png');
+    background-size: 24px;
+
+    &:hover {
+      background-position: 0 -24px;
+    }
+  }
+
+  .heading {
+    background-image: url('../img/border-left@2x.png'),
+                      url('../img/border-right@2x.png');
+    @include background-size(20px);
+  }
+}

@@ -4,6 +4,12 @@
 @import 'layout';
 @import 'modules';
 @import 'state';
-@import 'mediaqueries';
+@import 'retina';
+@media only screen and (min-width: $breakpoint-1) {
+  @import 'breakpoint-1';
+}
+@media only screen and (min-width: $breakpoint-2) {
+  @import 'breakpoint-2';
+}
 @import 'helpers';
 @import 'print';
