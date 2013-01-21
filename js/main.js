@@ -3,7 +3,7 @@ $(document).ready(function () {
 function getTweets() {
   $(".tweets").miniTwitter({
     query: "#sportshackday OR @sportshackday OR sportshackday.com",
-    limit: 6
+    limit: 8
   });
 }
 
