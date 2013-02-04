@@ -302,3 +302,58 @@
 .lt-ie9 .organizers img {
   width: 166px;
 }
+
+.winners {
+  margin-left: -7%;
+
+  list-style: none;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 27px 0 0 7%;
+    width: 93%;
+
+    vertical-align: top;
+
+    *display: inline;
+    zoom: 1;
+  }
+}
+
+.winner {
+  margin: 0;
+  padding: 8px 12px;
+
+  background: #fff;
+
+  border-radius: 5px;
+
+  color: $grey;
+  line-height: 1.2;
+}
+
+.winner a {
+  color: $grey;
+  text-decoration: none;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+.winner-info {
+  margin: 6px 0 0;
+
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.2;
+
+  small {
+    display: block;
+
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+  }
+}
